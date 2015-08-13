@@ -1,0 +1,7 @@
+# Tryton Server
+
+description "Tryton Server"
+start on runlevel [2345]
+stop on runlevel [06]
+
+exec /usr/local/bin/trytond
