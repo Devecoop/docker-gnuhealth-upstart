@@ -20,8 +20,9 @@ RUN ./gnuhealth_install.sh
 
 RUN rm -rf /var/cache/apt/archives/* /var/lib/apt/lists/*
 
-RUN ln -s /opt/gnuhealth/gnuhealth/tryton/server/trytond-3.*/bin/trytond /usr/local/bin/
+RUN ln -s /root/gnuhealth/tryton/server/trytond-3.*/bin/trytond /usr/local/bin/
 
 ADD tryton-server.init /etc/init/tryton-server.conf
+ADD trytond.conf /etc/trytond.conf
 
 EXPOSE 8000
